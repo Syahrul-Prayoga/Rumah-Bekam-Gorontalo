@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* body {
+    background: #e1ecf2;
+} */
+
+/* 
+ */
+
+/*
+================ 
+Style Top Nav Bar 
+================
+*/
+
+.wrapper .top_navbar {
+    width: calc(100% - 0px);
+    height: 60px;
+    display: flex;
+    position: fixed;
+    top: 0px;
+}
+
+.wrapper .top_navbar .hamburger {
+    width: 70px;
+    height: 100%;
+    background: #020236;
+    padding: 15px 17px;
+    /* border-top-left-radius: 20px; */
+    cursor: pointer;
+}
+
+.wrapper .top_navbar .hamburger div {
+    width: 35px;
+    height: 4px;
+    background: #92a6ea;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.wrapper .top_navbar .top_menu {
+    width: calc(100% - 70px);
+    background: rgb(245, 241, 241);
+    height: 100%;
+    /* border-top-right-radius: 20px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .top_navbar .top_menu .logo .logo_img {
+    margin-right: 10px;
+}
+
+.wrapper .top_navbar .top_menu .logo .logo_title {
+    color: #020236;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    float: right;
+    margin-top: 5px;
+}
+
+.wrapper .top_navbar .top_menu ul {
+    display: flex;
+}
+
+.wrapper .top_navbar .top_menu ul li a {
+    display: block;
+    margin: 0 10px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #2e4ead;
+    text-align: center;
+    border-radius: 50%;
+    color: #2e4ead;
+}
+
+.wrapper .top_navbar .top_menu ul li a:hover {
+    background: #4360b5;
+    color: #fff;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/*
+==================
+Style SideBar MENU
+==================
+*/
+
+.wrapper .sidebar_menu {
+    position: fixed;
+    height: calc(100% - 0px);
+    top: 60px;
+    left: 0px;
+    width: 200px;
+    /* border-bottom-left-radius: 20px; */
+    background-color: #020236;
+    font-size: small;
+    transition: all 0.3s ease;
+}
+
+.wrapper .sidebar_menu ul li a {
+    display: block;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 1px;
+    color: #92a6ea;
+    white-space: nowrap;
+}
+
+.wrapper .sidebar_menu ul li .dropdown-btn {
+    display: block;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 1px;
+    color: #92a6ea;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.wrapper .sidebar_menu ul li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: #92a6ea;
+    display: none;
+}
+
+.wrapper .sidebar_menu ul li span.icon {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.wrapper .sidebar_menu ul li span.list {
+    display: inline-block;
+}
+
+.wrapper .sidebar_menu ul li a:hover,
+.wrapper .sidebar_menu ul li a.active {
+    background: #4360b5;
+    color: #fff;
+    text-decoration: none;
+}
+
+.wrapper .sidebar_menu ul li a:hover:before,
+wrapper .sidebar_menu ul li a.active:before {
+    display: block;
+}
+
+.wrapper ul li .dropdown-container {
+    display: none;
+    background-color: #08085c;
+}
+
+.wrapper .dropdown-container .icon {
+    margin-left: 10px;
+}
+
+.wrapper .dropdown-btn .drop {
+    float: right;
+    padding-right: 0px;
+    padding-top: 2px;
+}
+
+/*
+====================
+Animate SideBar MENU
+====================
+*/
+.wrapper.slide .sidebar_menu {
+    width: 70px;
+}
+
+.wrapper.slide .sidebar_menu ul li a {
+    text-align: center;
+}
+
+.wrapper.slide .sidebar_menu ul li a span.icon {
+    margin: 0;
+}
+
+.wrapper.slide .sidebar_menu ul li a span.list {
+    display: none;
+}
+
+.wrapper.slide .sidebar_menu ul li span.drop {
+    display: none;
+}
+
+.wrapper.slide .main_content {
+    width: calc(100% - 80px);
+    margin-left: 80px;
+}
+
+/* mencoba tambahan */
+.wrapper.slide .main_content .card {
+    width: calc(100% - 20px);
+    margin-left: 80px;
+}
+
+/* Style Main Content */
+.main_content {
+    width: calc(100% - 20px);
+    /* width: calc(100% - 210px); */
+    margin-left: 220px;
+    margin-top: 80px;
+    transition: .3s;
+    /* position: fixed; */
+}
+
+.main_content .title-main {
+    font-size: large;
+    padding: 5px;
+    padding-bottom: 1px;
+}
+
+.main_content .title-main .icon {
+    margin-right: 10px;
+}
+
+
+/* 
+=================
+Dashboard
+=================
+*/
+
+.main_content .display-4 {
+    font-weight: bold;
+}
+
+.main_content .display-5 {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.main_content .card-body-icon {
+    position: absolute;
+    z-index: 0;
+    top: 25px;
+    right: 4px;
+    opacity: 0.4;
+    font-size: 100px;
+
+}
+
+/* 
+=================
+Daftar Pegawai
+=================
+*/
+
+
+.wrapper .main_content .table {
+    margin-top: 15px;
+    border: 1px solid white;
+}
