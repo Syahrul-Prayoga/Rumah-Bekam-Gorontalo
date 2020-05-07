@@ -75,10 +75,20 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
+
+	// Address Local
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
 	'database' => 'db_rbg',
+
+	// Address Hosting
+	// 'hostname' => 'localhost',
+	// 'username' => 'id13589510_rbg',
+	// 'password' => 'M@1*sHdK9O5LM68K',
+	// 'database' => 'id13589510_db_rbg',
+	// End Of Address Hosting
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

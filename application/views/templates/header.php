@@ -141,8 +141,8 @@
                                     </span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="<?= base_url(); ?>rekam medik">
+                            <!-- <li>
+                                <a href="<?= base_url(); ?>redik">
                                     <span class="icon">
                                         <i class="fas fa-clipboard-list"></i>
                                     </span>
@@ -150,7 +150,7 @@
                                         Rekam Medik
                                     </span>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </li>
@@ -189,7 +189,7 @@
                                     </span>
                                 </a>
                             </li> -->
-                            <li>
+                            <!-- <li>
                                 <a href="#">
                                     <span class="icon">
                                         <i class="fas fa-shipping-fast"></i>
@@ -198,7 +198,7 @@
                                         Penjualan
                                     </span>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </li>

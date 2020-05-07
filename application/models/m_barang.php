@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_barang extends CI_model
 {
@@ -27,5 +27,17 @@ class M_barang extends CI_model
 	{
 		$this->db->where($where);
 		$this->db->delete($table);
+	}
+
+	public function ubahData($where, $table)
+	{
+		return $this->db->get_where($table, $where);
+	}
+
+	public function prosesUbahData($where, $data, $table)
+	{
+		$this->db->where($where);
+
+		$this->db->update($table, $data);
 	}
 }
