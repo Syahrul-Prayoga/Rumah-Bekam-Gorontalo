@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/bootstrap.min.css">
     <!-- FontAwesome 5.13.0 -->
     <script src="<?= base_url(); ?>/assets/fontawesome-free-5.13.0/js/all.min.js"></script>
+    <link href="<?= base_url(); ?>/assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-    <title><?= $data['judul']; ?></title>
+    <title><?= $judul; ?></title>
 
 </head>
 
@@ -20,7 +21,7 @@
 
     <div class="wrapper">
         <!-- Navigation Bars -->
-        <div class="top_navbar">
+        <div class="top_navbar" style="z-index: 99999">
             <div class="hamburger">
                 <div></div>
                 <div></div>
@@ -34,20 +35,32 @@
                     <span class="logo_title">
                         <b>Rumah Bekam Gorontalo</b>
                     </span>
+
                 </div>
-                <ul>
-                    <!-- <li><a href="#"><i class="fas fa-search"></i></a></li> -->
-                    <!-- <li><a href="#"><i class="fas fa-bell"></i></a></li> -->
-                    <!-- <li><a href="#"><i class="fas fa-user"></i></a></li> -->
+                <ul class="my-2">
+                    <!-- <li><i class="fas fa-search"></i></a></li> -->
+
+                    <li>
+                        <span class="my-3 mx-2">
+                            <i class="fas fa-user"></i>
+                            Selamat datang <?= $user['NamaLengkap'] ?>
+                        </span>
+                    </li>
+                    |
+                    <a class="mx-2" href="<?= base_url('login/logout'); ?>">logout</a>
+
+
+                    <!-- <li><i class="fas fa-user"></i></a></li> -->
                 </ul>
             </div>
         </div>
+
 
         <!-- Side Bars Navigation -->
         <div class="sidebar_menu">
             <ul>
                 <li>
-                    <a href="<?= base_url(); ?>index.php/home">
+                    <a href="<?= base_url(); ?>home">
                         <span class="icon">
                             <i class="fa fa-home"></i></span>
                         <span class="list">Dashboard</span>
@@ -69,7 +82,7 @@
                     <div class="dropdown-container">
                         <ul>
                             <li>
-                                <a href="<?= base_url(); ?>index.php/pegawai">
+                                <a href="<?= base_url(); ?>pegawai">
                                     <span class="icon">
                                         <i class="fas fa-user-tie"></i>
                                     </span>
@@ -79,7 +92,7 @@
                                 </a>
                             </li>
 
-                            <li>
+                            <!-- <li>
                                 <a href="#">
                                     <span class="icon">
                                         <i class="fas fa-clipboard"></i>
@@ -99,7 +112,7 @@
                                         Gaji
                                     </span>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </li>
@@ -119,7 +132,7 @@
                     <div class="dropdown-container">
                         <ul>
                             <li>
-                                <a href="<?= base_url(); ?>index.php/pasien">
+                                <a href="<?= base_url(); ?>pasien">
                                     <span class="icon">
                                         <i class="fa fa-user-injured" aria-hidden="true"></i>
                                     </span>
@@ -129,7 +142,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="<?= base_url(); ?>index.php/rekam medik">
+                                <a href="<?= base_url(); ?>rekam medik">
                                     <span class="icon">
                                         <i class="fas fa-clipboard-list"></i>
                                     </span>
@@ -157,7 +170,7 @@
                     <div class="dropdown-container">
                         <ul>
                             <li>
-                                <a href="<?= base_url(); ?>index.php/barang">
+                                <a href="<?= base_url('barang'); ?>">
                                     <span class="icon">
                                         <i class="fas fa-cubes"></i>
                                     </span>
@@ -166,7 +179,7 @@
                                     </span>
                                 </a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#">
                                     <span class="icon">
                                         <i class="fas fa-parachute-box"></i>
@@ -175,7 +188,7 @@
                                         Pengadaan
                                     </span>
                                 </a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="#">
                                     <span class="icon">
@@ -189,13 +202,51 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <!-- <li>
+                    <a class="dropdown-btn">
+                        <span class="icon">
+                            <i class="fas fa-edit" aria-hidden="true"></i>
+                        </span>
+                        <span class="list">
+                            Kelola Pengguna
+                        </span>
+                        <span class="drop">
+                            <i class="fa fa-caret-down"></i>
+                        </span>
+                    </a>
+
+                    <div class="dropdown-container">
+                        <ul>
+                            <li>
+                                <a href="<?= base_url('user'); ?>">
+                                    <span class="icon">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    <span class="list">
+                                        User
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li> -->
+                <!-- <li>
                     <a href="#">
                         <span class="icon">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </span>
                         <span class="list ml-1">
                             About
+                        </span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="<?= base_url('login/logout'); ?>">
+                        <span class="icon">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </span>
+                        <span class="list ml-1">
+                            Logout
                         </span>
                     </a>
                 </li>
